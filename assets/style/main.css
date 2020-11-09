@@ -45,14 +45,33 @@
 
 .intro-nav .menu ul li {
     list-style: none;
-    font-size: 24px;
+    font-size: 20px;
     display: inline;
     padding-right: 75px;
 }
 
-.intro-nav .menu ul li a {
+.nav .menu ul li a {
     text-decoration: none;
+    position: relative;
     color: black;
+}
+
+.nav .menu ul li a:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav .menu ul li a:hover:before{
+    visibility: visible;
+    color: peachpuff;
+    width: 100%;
 }
 
 .intro-contact {
