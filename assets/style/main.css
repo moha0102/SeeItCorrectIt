@@ -20,11 +20,10 @@
 }
 
 #overlay {
-
     height: 100%;
     width: 100%;
     background-color: black;
-    opacity: .5;
+    opacity: .6;
     position: absolute;
     z-index: -1;
 }
