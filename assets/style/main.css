@@ -52,7 +52,7 @@
 
 .intro-nav .menu ul li a {
     text-decoration: none;
-    color: space;
+    color: black;
 }
 
 .intro-contact {
@@ -76,7 +76,6 @@
 .intro-body {
     display: flex;
     flex-direction: column;
-
     height: 95vh;
     width: 100%;
     overflow: hidden;
@@ -99,4 +98,8 @@
 
 .intro-body {
     font-size: 28px;
+}
+
+.test {
+    height: 100vh;
 }
