@@ -79,6 +79,8 @@
     justify-content: center;
     width: 60%;
     font-size: 18px;
+    background-color: white;
+    width: 100%;
 }
 
 .intro-contact div{
@@ -90,6 +92,16 @@
     height: 3px;
     border-left-style: solid;
     border-width: 3px;
+    font-size: 20px;
+}
+
+.intro-contact div i {
+    padding-right: 15px;
+}
+
+.intro-contact a {
+    text-decoration: none;
+    color: black;
 }
 
 .intro-body {
@@ -119,6 +131,108 @@
     font-size: 28px;
 }
 
-.test {
-    height: 100vh;
+.main-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:  #F8F8F8;
+}
+
+.studies {
+    display: flex;
+    margin:10px;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #F8F8F8;
+}
+
+.main-body #findit {
+    font-style: normal;
+    font-family: alternate-gothic-no-3-d, sans-serif;
+    font-size: 10em;
+    text-transform: uppercase;
+    color: #423A37;
+    border-bottom-style: solid;
+    border-width: 3px;
+}
+
+.studies div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30vh;
+    flex-basis: 50%;
+}
+
+.studies div ul li {
+    list-style: none;
+    font-weight: 550;
+    font-size: 18px;
+}
+
+.studies div ul li:first-child {
+    border-bottom-style: solid;
+    text-align: center;
+    border-width: 2px;
+}
+
+.studies div ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.study-color {
+    background-color: #F0F0F0;
+}
+
+.socials {
+    display: flex;
+}
+
+.socials div {
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+}
+
+.socials div a {
+    text-decoration: none;
+    color: #423a36;
+}
+
+.socials div:hover {
+    cursor: pointer;
+    background-color: #AA0E28;
+}
+
+.socials div:hover a {
+    color: white;
+}
+
+.footer {
+    min-height: 25vh;
+    background-color: #AA0E28;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer img {
+    width: 5%;
+    height: 5%;
+    margin-top: 20px;
+}
+
+.footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.footer p {
+    color: white;
 }
