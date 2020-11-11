@@ -46,15 +46,20 @@
 .intro-nav .menu ul li {
     list-style: none;
     font-size: 20px;
-    display: inline;
+    display: inline-flex;
     padding-right: 30px;
 }
 
 .nav .menu ul li a {
     text-decoration: none;
-    position: relative;
     color: black;
 }
+
+.menu {
+    position: relative;
+}
+
+/*
 
 .nav .menu ul li a:before{
     content: "";
@@ -73,6 +78,8 @@
     color: peachpuff;
     width: 100%;
 }
+*/
+
 
 .intro-contact {
     display: flex;
@@ -236,3 +243,63 @@
 .footer p {
     color: white;
 }
+
+
+.menu ul li:hover .drop-admission {
+    top: 75px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+.drop-admission {
+    position: absolute;
+    top: 100px;
+    background: #F4F4F4;
+    width: 55%;
+    right: 0px;
+    opacity: 0;
+    visibility: hidden;
+    z-index:100;
+}
+
+.admission:hover .drop-admission {
+    display: block;
+}
+
+.drop-admission .content {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.content .row {
+    width: calc(40% - 30px);
+    line-height: 45px;
+}
+
+.row header {
+    color: black;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+
+/*
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.row .mega-links {
+    display: flex;
+    flex-direction: column;
+
+}
+*/
+
+
+
+
