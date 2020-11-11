@@ -21,7 +21,7 @@
 
 .nav {
     display: flex;
-    width: 75%;
+    width: 100%;
 }
 
 .intro-nav .logo {
@@ -47,7 +47,7 @@
     list-style: none;
     font-size: 20px;
     display: inline;
-    padding-right: 75px;
+    padding-right: 30px;
 }
 
 .nav .menu ul li a {
