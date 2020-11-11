@@ -15,13 +15,22 @@
                 <div class="logo">
                     <img src="assets/images/uat-logo.png">
                 </div>
-                <div class="menu">
+                <label for="btn" class="icon">
+                    <span class="fa fa-bars"></span>
+                </label>
+                <div id="menu" class="menu">
+                    <input type="checkbox" id="btn">
                     <ul class="main-ul">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Admissions</a>
+                        <li><a class="home" href="#">Home</a></li>
+                        <li>
+                            <label for="btn-1" class="show">Admission</label>
+                            <a href="#">Admissions</a>
+                            <input type="checkbox" id="btn-1">
                             <ul>
                                 <li>
-                                    <a href="#">Academics</a><i class="fas fa-plus"></i>
+                                    <label for="btn-2" class="show">Academics +</label>
+                                    <a href="#">Academics</a></i>
+                                    <input type="checkbox" id="btn-2">
                                     <ul>
                                         <li><a href="#">Academic Calender</a></li>
                                         <li><a href="#">Featured Alumni</a></li>
@@ -29,10 +38,11 @@
                                         <li><a href="#">Military</a></li>
                                         <li><a href="#">Private Consulation</a></li>
                                     </ul>
-                                
                                 </li>
                                 <li>
-                                    <a href="#">Campus</a><i class="fas fa-plus"></i>
+                                    <label for="btn-3" class="show">Campus +</label>
+                                    <a href="#">Campus</a>
+                                    <input type="checkbox" id="btn-3">
                                     <ul>
                                         <li><a href="#">See The Campus</a></li>
                                         <li><a href="#">Student Consumer Info</a></li>
@@ -45,10 +55,16 @@
                                 
                             </ul>
                         </li>
-                        <li><a href="#">Academics</a>
+
+                        <li>
+                            <label for="btn-4" class="show">Academics</label>
+                            <a href="#">Academics</a>
+                            <input type="checkbox" id="btn-4">
                             <ul>
                                 <li>
-                                    <a href="#">Education</a><i class="fas fa-plus"></i>
+                                    <label for="btn-5" class="show">Education +</label>
+                                    <a href="#">Education</a>
+                                    <input type="checkbox" id="btn-5">
                                     <ul>
                                         <li><a href="#">UAT Online</a></li>
                                         <li><a href="#">Academic Catalog</a></li>
@@ -63,7 +79,10 @@
                                 
                             </ul>
                         </li>
-                        <li><a href="#">Student experience</a>
+                        <li>
+                            <label for="btn-6" class="show">Education</label>
+                            <a href="#">Student experience</a>
+                            <input type="checkbox" id="btn-6">
                             <ul>
                                 <li><a href="#">Commencement</a></i></li>       
                                 <li><a href="#">Internships</a></i></li>   
@@ -74,10 +93,15 @@
                             </ul>
                         </li>
 
-                        <li><a href="#">About UAT</a>
+                        <li>
+                            <label for="btn-7" class="show">About UAT</label>
+                            <a href="#">About UAT</a>
+                            <input type="checkbox" id="btn-7">
                             <ul>
                                 <li>
-                                    <a href="#">UAT</a><i class="fas fa-plus"></i>
+                                    <label for="btn-8" class="show">UAT +</label>
+                                    <a href="#">UAT +</a>
+                                    <input type="checkbox" id="btn-8">
                                     <ul>
                                         <li><a href="#">About UAT</a></li>
                                         <li><a href="#">Accreditaion</a></li>
@@ -237,6 +261,7 @@
         </p>
 
     </footer>
+
     
 </body>
 </html>

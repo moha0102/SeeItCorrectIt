@@ -23,6 +23,7 @@
     display: flex;
     width: 75%;
     z-index: 2;
+    align-items: center;
 }
 
 .intro-nav .logo {
@@ -30,17 +31,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .intro-nav .logo img {
-    width: 20%;
+    max-width: 30%;
 }
 
-.intro-nav .menu {
+.nav .menu {
     flex: 2;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
 }
 
@@ -55,7 +54,7 @@
 
 .menu ul li a {
     text-decoration: none;
-    padding: 9px 15px;
+    padding: 9px 9px;
     color: black;
     font-size: 20px;
     
@@ -84,17 +83,19 @@
     position: relative;
     margin: 0px;
     width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: block;
     border-bottom: 1px solid rgba(0,0,0,0.3);
     background-color: #F4F4F4;
-    padding: 10px;
     text-transform: uppercase;
+    padding: 10px;
+}
+
+.fas {
+    float: right;
 }
 
 .menu ul ul li a {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .menu ul ul li i {
@@ -104,14 +105,14 @@
 
 .menu ul ul ul li {
     position: relative;
-    top: -26px;
-    left: 160px;
+    top: -30px;
+    left: 150px;
     width: 170px;
     background-color: #F4F4F4;
 }
 
 .menu ul ul ul li a {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .intro-contact {
@@ -275,6 +276,115 @@
 
 .footer p {
     color: white;
+}
+
+.show, input, .icon {
+    display: none;
+}
+
+@media only screen and (max-width: 1380px) {
+    .main-body #findit {
+        font-size: 5em;
+    }
+    .nav .logo {
+        justify-content: flex-start;
+    }
+    .nav {
+        display: flex;
+        margin-bottom: 25px;
+        min-height: 10vh;
+        flex-wrap: wrap;
+    }
+
+
+    .nav .menu {
+        display: flex;
+        justify-content: flex-start;
+        flex-basis: 100%;
+        margin: 20px;
+    }
+
+    .menu ul {
+        width: 100%;
+    }
+
+    .menu ul ul li {
+        width: 100%;
+        font-size: 16px;
+    }
+
+
+    .menu ul li, nav ul ul li {
+        display: block;
+    }
+
+    .menu ul ul {
+        top: 70px;
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav ul ul li {
+        text-transform: none;
+        padding: 0px;
+    }
+
+    .menu ul ul ul li{
+        position: static;
+        display: block;
+    }
+
+
+    .menu ul ul li{
+        padding-left: 40px;
+        border: none;
+    }
+
+    .show {
+        display: block;
+        line-height: 70px;
+        cursor: pointer;
+    }
+
+    .icon {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+
+    }
+
+    .show + a, .nav .menu ul{
+        display: none;   
+    }
+
+
+    [id^=btn]:checked + ul {
+        display: block;
+        
+    }
+
+
+    
+}
+
+
+@media only screen and (max-width: 705px) {
+    .main-body #findit {
+        font-size: 4em;
+    }
+
+    
+}
+
+@media only screen and (max-width: 535px) {
+    .main-body #findit {
+        font-size: 3em;
+    }
+    
+
+    
 }
 
 
