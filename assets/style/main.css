@@ -21,7 +21,8 @@
 
 .nav {
     display: flex;
-    width: 100%;
+    width: 75%;
+    z-index: 2;
 }
 
 .intro-nav .logo {
@@ -39,47 +40,79 @@
 .intro-nav .menu {
     flex: 2;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: flex-end;
 }
 
-.intro-nav .menu ul li {
-    list-style: none;
-    font-size: 20px;
-    display: inline-flex;
-    padding-right: 30px;
-}
-
-.nav .menu ul li a {
-    text-decoration: none;
-    color: black;
-}
-
-.menu {
+.menu ul {
+    list-style-type: none;
     position: relative;
 }
 
-/*
+.menu ul li {
+    display: inline-block;
+}
 
-.nav .menu ul li a:before{
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: black;
+.menu ul li a {
+    text-decoration: none;
+    padding: 9px 15px;
+    color: black;
+    font-size: 20px;
+    
+}
+
+.menu ul li a:hover {
+    border-radius: 5px;
+    opacity: .5;
+}
+
+.menu ul ul {
+    opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 40px;
 }
 
-.nav .menu ul li a:hover:before{
+.menu ul li:hover > ul {
     visibility: visible;
-    color: peachpuff;
-    width: 100%;
+    opacity: 1;
+    top: 30px;
+    transition: top .3s;
 }
-*/
 
+.menu ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    background-color: #F4F4F4;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.menu ul ul li a {
+    font-size: 16px;
+}
+
+.menu ul ul li i {
+    max-width: 58px;
+    text-align: right;
+}
+
+.menu ul ul ul li {
+    position: relative;
+    top: -26px;
+    left: 160px;
+    width: 170px;
+    background-color: #F4F4F4;
+}
+
+.menu ul ul ul li a {
+    font-size: 13px;
+}
 
 .intro-contact {
     display: flex;
@@ -243,63 +276,6 @@
 .footer p {
     color: white;
 }
-
-
-.menu ul li:hover .drop-admission {
-    top: 75px;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s ease;
-}
-
-.drop-admission {
-    position: absolute;
-    top: 100px;
-    background: #F4F4F4;
-    width: 55%;
-    right: 0px;
-    opacity: 0;
-    visibility: hidden;
-    z-index:100;
-}
-
-.admission:hover .drop-admission {
-    display: block;
-}
-
-.drop-admission .content {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-}
-
-.content .row {
-    width: calc(40% - 30px);
-    line-height: 45px;
-}
-
-.row header {
-    color: black;
-    text-decoration: underline;
-    font-weight: 500;
-    font-size: 20px;
-}
-
-
-
-/*
-.row {
-    display: flex;
-    flex-direction: column;
-}
-
-.row .mega-links {
-    display: flex;
-    flex-direction: column;
-
-}
-*/
-
 
 
 
