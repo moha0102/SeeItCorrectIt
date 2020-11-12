@@ -384,13 +384,26 @@
         font-size: 8px;
     }
 
+    .menu ul li:not(.dropdown) {
+        list-style: none;
+        position: relative;
+        width: 135x;
+        text-align: center;
+    }
+
+    .menu ul li:hover .dropdown {
+        display: flex;
+        position: static;
+        padding-left: 35px;
+    }
+
 }
 
 @media only screen and (max-width: 300px) {
     .menu ul li:not(.dropdown) {
         list-style: none;
         position: relative;
-        width: 135px;
+        width: 135x;
         text-align: center;
     }
 
