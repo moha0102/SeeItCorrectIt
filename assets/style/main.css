@@ -21,7 +21,7 @@
 
 .nav {
     display: flex;
-    width: 75%;
+    width: 95%;
     z-index: 2;
     align-items: center;
 }
@@ -34,85 +34,59 @@
 }
 
 .intro-nav .logo img {
-    max-width: 30%;
+    max-width: 25%;
 }
 
-.nav .menu {
-    flex: 2;
+.menu {
+    flex: 2;    
+}
+
+.menu ul:not(.dropdown) {
     display: flex;
     justify-content: flex-end;
 }
 
-.menu ul {
-    list-style-type: none;
+.menu ul li:not(.dropdown) {
+    list-style: none;
     position: relative;
+    width: 195px;
+    text-align: center;
 }
 
-.menu ul li {
-    display: inline-block;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    padding: 9px 9px;
+.menu a {
     color: black;
+    text-decoration: none;
     font-size: 20px;
-    
 }
 
-.menu ul li a:hover {
-    border-radius: 5px;
-    opacity: .5;
-}
-
-.menu ul ul {
-    opacity: 0;
-    visibility: hidden;
+.menu ul li:hover .dropdown {
+    display: flex;
     position: absolute;
-    top: 40px;
+
 }
 
-.menu ul li:hover > ul {
-    visibility: visible;
-    opacity: 1;
-    top: 30px;
-    transition: top .3s;
-}
-
-.menu ul ul li {
-    position: relative;
-    margin: 0px;
-    width: 150px;
-    display: block;
-    border-bottom: 1px solid rgba(0,0,0,0.3);
+.menu .dropdown {
+    display: none;
+    flex-direction: column;
     background-color: #F4F4F4;
-    text-transform: uppercase;
+    text-align: center;
+    left: 0px;
+}
+
+
+.dropdown a {
+    font-size: 18px;
+
+}
+
+.dropdown li {
+    border-bottom: 1px solid rgba(0,0,0,0.5);
     padding: 10px;
 }
 
-.fas {
-    float: right;
-}
-
-.menu ul ul li a {
-    font-size: 14px;
-}
-
-.menu ul ul li i {
-    max-width: 58px;
-    text-align: right;
-}
-
-.menu ul ul ul li {
-    position: relative;
-    top: -30px;
-    left: 150px;
-    width: 170px;
-    background-color: #F4F4F4;
-}
-
-.menu ul ul ul li a {
-    font-size: 14px;
+.dropdown li:hover {
+    opacity: 0.6;
+    background-color: #f6f6f6;
 }
 
 .intro-contact {
@@ -129,7 +103,7 @@
     align-items: center;
     justify-content: center;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
     height: 3px;
     border-left-style: solid;
     border-width: 3px;
@@ -148,16 +122,17 @@
 .intro-body {
     display: flex;
     flex-direction: column;
-    height: 95vh;
+    height: 100vh;
     width: 100%;
     overflow: hidden;
     position: relative;
 }
 
 #player {
-    flex-shrink: 0;
-    z-index: -2;
-    position: absolute;
+    object-fit: fill;
+    max-width: 100%;
+    min-height: 100%;
+    
 }
 
 #overlay {
@@ -165,7 +140,7 @@
     opacity: .6;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    position: absolute;
 }
 
 .intro-body {
@@ -186,6 +161,11 @@
     flex-wrap: wrap;
     width: 100%;
     background-color: #F8F8F8;
+}
+
+.studies img {
+    max-width: 100%;
+    height: auto;
 }
 
 .main-body #findit {
@@ -278,101 +258,75 @@
     color: white;
 }
 
-.show, input, .icon {
-    display: none;
-}
-
 @media only screen and (max-width: 1380px) {
     .main-body #findit {
         font-size: 5em;
     }
-    .nav .logo {
-        justify-content: flex-start;
-    }
+
     .nav {
-        display: flex;
-        margin-bottom: 25px;
-        min-height: 10vh;
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 
-
-    .nav .menu {
-        display: flex;
-        justify-content: flex-start;
-        flex-basis: 100%;
-        margin: 20px;
-    }
-
-    .menu ul {
-        width: 100%;
-    }
-
-    .menu ul ul li {
-        width: 100%;
-        font-size: 16px;
-    }
-
-
-    .menu ul li, nav ul ul li {
-        display: block;
-    }
-
-    .menu ul ul {
-        top: 70px;
-        position: static;
-        display: none;
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .nav ul ul li {
-        text-transform: none;
-        padding: 0px;
-    }
-
-    .menu ul ul ul li{
-        position: static;
-        display: block;
-    }
-
-
-    .menu ul ul li{
-        padding-left: 40px;
-        border: none;
-    }
-
-    .show {
-        display: block;
-        line-height: 70px;
-        cursor: pointer;
-    }
-
-    .icon {
-        display: block;
-        font-size: 25px;
-        cursor: pointer;
+    .intro-nav .logo img {
+        max-width: 60%;
+        margin: 10px;
 
     }
 
-    .show + a, .nav .menu ul{
-        display: none;   
-    }
-
-
-    [id^=btn]:checked + ul {
-        display: block;
-        
-    }
-
-
-    
 }
 
+
+@media only screen and (max-width: 1040px) {
+    .menu ul:not(.dropdown) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    
+    .menu ul li:not(.dropdown) {
+        list-style: none;
+        position: relative;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .menu a {
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    
+    .menu ul li:hover .dropdown {
+        display: flex;
+        position: static;
+        padding-left: 80px;
+    }
+    
+    .menu .dropdown {
+        display: none;
+        flex-direction: column;
+        background-color: #F4F4F4;
+        
+    }
+}
 
 @media only screen and (max-width: 705px) {
     .main-body #findit {
         font-size: 4em;
+    }
+
+    .intro-contact {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .intro-contact div {
+        border-left-style: none;
+        border-bottom: 1px solid rgba(0,0,0,0.5);
+    }
+
+    .studies div ul li {
+        font-size: 14px;
     }
 
     
@@ -382,9 +336,54 @@
     .main-body #findit {
         font-size: 3em;
     }
-    
 
-    
+    .studies div ul li {
+        font-size: 10px;
+    }
+
+    .menu a {
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .dropdown a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .main-body #findit {
+        font-size: 2em;
+    }
+
+    .menu a {
+        color: black;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .dropdown a {
+        font-size: 12px;
+    }
+
+    .intro-contact div {
+        border-left-style: none;
+        border-bottom: 1px solid rgba(0,0,0,0.5);
+        font-size: 14px;
+    }
+
+    .menu ul li:not(.dropdown) {
+        list-style: none;
+        position: relative;
+        width: 140px;
+        text-align: center;
+    }
+
+    .studies div ul li {
+        font-size: 8px;
+    }
+
 }
 
 
