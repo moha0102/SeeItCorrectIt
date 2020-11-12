@@ -117,9 +117,10 @@
 
 .intro-body {
     flex-direction: column;
-    height: 100vh;
+    height: 78vh;
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 #player {
