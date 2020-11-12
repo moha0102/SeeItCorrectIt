@@ -293,7 +293,6 @@
     .menu ul li:hover .dropdown {
         display: flex;
         position: static;
-        padding-left: 80px;
     }
     
     .menu .dropdown {
